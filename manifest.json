@@ -10,6 +10,7 @@
     "default_title": "Set comment"
   },
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "https://app.activecollab.com/*"
   ]
 }

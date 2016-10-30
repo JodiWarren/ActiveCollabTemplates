@@ -5,7 +5,7 @@
  value "popup.html".
  -->
 <html>
-  <head>
+<head>
     <title>Active Collab - Set Comment</title>
     <!--
       - JavaScript and HTML must be in separate files: see our Content Security
@@ -13,10 +13,90 @@
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
-    <script src="popup.js"></script>
-  </head>
-  <body>
-    <button class="setComment">Set Comment</button>
-  </body>
+
+    <style>
+        .acComment {
+            min-width: 450px;
+        }
+
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<button class="fileComment">File comment</button>
+<form action="#" class="acComment" name="acComment" id="acComment" hidden>
+
+    <div class="step step--tested-on step--options">
+        <p>Tested on:</p>
+        <div class="options">
+            <label for="tested-on-local">
+                <input type="radio" id="tested-on-local" name="tested-on" value="Local"><strong>L</strong>ocal
+            </label>
+            <label for="tested-on-development">
+                <input type="radio" id="tested-on-development" name="tested-on" value="Development"><strong>D</strong>evelopment
+            </label>
+            <label for="tested-on-staging">
+                <input type="radio" id="tested-on-staging" name="tested-on" value="Staging"><strong>S</strong>taging
+            </label>
+            <label for="tested-on-production">
+                <input type="radio" id="tested-on-production" name="tested-on" value="Production"><strong>P</strong>roduction
+            </label></div>
+    </div>
+
+    <div class="step step--deployed-to step--options">
+        <div class="options">
+            <p>Deployed to:</p>
+            <label for="deployed-to-development">
+                <input type="radio" id="deployed-to-development" name="deployed-to" value="Development"><strong>D</strong>evelopment
+            </label>
+            <label for="deployed-to-staging">
+                <input type="radio" id="deployed-to-staging" name="deployed-to" value="Staging"><strong>S</strong>taging
+            </label>
+            <label for="deployed-to-production">
+                <input type="radio" id="deployed-to-production" name="deployed-to" value="Production"><strong>P</strong>roduction
+            </label>
+        </div>
+    </div>
+
+    <div class="step step--link-to-commit">
+        <label for="link-to-commit">Link to Commit</label>
+        <input type="url" placeholder="https://github.com/WeareJH/repo/commit/123commitid" name="link-to-commit"
+               id="link-to-commit">
+    </div>
+
+    <div class="step step--browser-tested-on">
+        <label for="browser-tested-on">Browser tested on</label>
+        <input type="text" placeholder="Mac Chrome 54" name="browser-tested-on"
+               id="browser-tested-on">
+    </div>
+
+    <div class="step step--description step--textarea">
+        <label for="description">Description of work carried out</label>
+        <textarea placeholder="I fixed the bug and copied the files over and installed the module" name="description"
+                  id="description"></textarea>
+    </div>
+
+    <div class="step step--testing-steps step--textarea">
+        <label for="testing-steps">Testing steps:</label>
+        <textarea placeholder="To test you do this and this and this" name="testing-steps"
+                  id="testing-steps"></textarea>
+    </div>
+
+    <div class="step step--notes step--last step--textarea">
+        <label for="notes">Notes:</label>
+        <textarea placeholder="It's also important that you note this and also that" name="notes" id="notes"></textarea>
+    </div>
+</form>
+
+<script src="jquery.3.1.1.min.js"></script>
+<script src="popup.js"></script>
+
+</body>
 </html>
 
