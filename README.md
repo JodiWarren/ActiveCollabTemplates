@@ -1,13 +1,16 @@
-# ActiveCollab Templates
+ActiveCollab Templates
+=
 
-## Description
+Description
+--
 A prompt-based population of ticket comments in ActiveCollab as a Chrome extension.
  
  To install, download the latest release and drag it into the Chrome Extensions pane.
  
  To use, click the little A in your Chrome toolbar when on an ActiveCollab comments page.
   
- ## Instructions
+ Instructions
+ --
  Fill out the data for each input.
  
  Select a radio button by pressing the key that corresponds to the bold letters.
@@ -17,7 +20,8 @@ A prompt-based population of ticket comments in ActiveCollab as a Chrome extensi
  Advance a textarea with Meta + Enter.
 
  
- ## Future
+ Future
+ --
  - Some styling.
  - Some less shocking code.
  - Persist popup when focus lost by injecting code into page instead of using native popup.
@@ -27,5 +31,6 @@ A prompt-based population of ticket comments in ActiveCollab as a Chrome extensi
  - Add some help info per input.
  - Auto-select template based on certain project parameters.
 
-## Changelog
+Changelog
+--
 v0.1 - Putting the minimum into MVP.
